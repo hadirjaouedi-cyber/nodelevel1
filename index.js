@@ -5,9 +5,53 @@ const port=3001
 const Mydata=require("./models/mydataschema");
 
 
-
+app.use(express.static('public'))
 app.set('view engine','ejs')
 app.use(express.urlencoded({extended:true}));
+
+// Auto refresh
+const path = require("path");
+const livereload = require("livereload");
+const liveReloadServer = livereload.createServer();
+liveReloadServer.watch(path.join(__dirname, 'public'));
+ 
+ 
+const connectLivereload = require("connect-livereload");
+app.use(connectLivereload());
+ 
+liveReloadServer.server.once("connection", () => {
+  setTimeout(() => {
+    liveReloadServer.refresh("/");
+  }, 100);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.get("/",(req,res)=> {
     Mydata.find()
     .then((result)=> { res.render("homepage",{mytitle:"home page ",arr:result})  ;})
@@ -37,3 +81,6 @@ app.post("/",(req,res)=> {
     });
    
 });
+
+
+

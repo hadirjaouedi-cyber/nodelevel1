@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+  <meta name="generator" content="Astro v5.13.2" />
+  <title>home page</title>
+  <link rel="stylesheet" href="../bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+  <script src="../js/color-modes.js"></script>
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <link href="../css/sidebars.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/darklight.css">
+  <link rel="stylesheet" href="../css/mystyle.css">
+</head>
+
+<body>
+     <%- include('../components/darklight.ejs') %>
+  <main class="d-flex flex-nowrap">
+
+  
+     <%- include('../components/sidebar.ejs',{currentPage:"add"}) %>
+
+
+
+
+
+
+    <section class=" w-100  ">
+       <%- include('../components/navbar.ejs') %>
+      <form class="row gx-3 gy-4 mx-0 mt-3">
+  <div class="col-md-6">
+    <label for="inputFirstName" class="form-label">FirstName</label>
+    <input type="text" class="form-control" id="inputFirstNam" placeholder="Jaouadi">
+  </div>
+  <div class="col-md-6">
+    <label for="inputLastName" class="form-label">LastName</label>
+    <input type="text" class="form-control" id="inputLastName" placeholder="Hadir">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="yourn me@gmail.com">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPhoneNumber" class="form-label">PhoneNumber</label>
+    <input type="number" class="form-control" id="inputPhoneNumber" placeholder="00-000-00">
+  </div>
+<div>
+      <div class="col-md-6">
+    <label for="inputAge" class="form-label">Age</label>
+    <input type="number" class="form-control" id="inputAge" placeholder="Your Age ..">
+  </div>
+</div>
+
+  <div class="col-md-4">
+    <label for="inputCountry"class="form-label">Country</label>
+    <select id="inputCountry" class="form-select">
+      <option selected>Moroco</option>
+      <option>Tunisia</option>
+    </select>
+  </div>
+<div>
+      <div class="col-md-4">
+    <label for="inputGneder"class="form-label">Gneder</label>
+    <select id="inputGneder" class="form-select">
+      <option selected hidden disabled>choose here</option>
+      <option>female</option>
+      <option>male</option>
+    </select>
+  </div>
+
+</div>
+
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+    </section>
+    
+
+
+
+
+  </main>
+  <script src="../js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="../js/sidebars.js" class="astro-vvvwv3sm"></script>
+   <script src="../js/main.js"></script>
+</body>
+
+</html>

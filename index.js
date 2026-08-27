@@ -53,14 +53,19 @@ liveReloadServer.server.once("connection", () => {
 
 
 app.get("/",(req,res)=> {
-    Mydata.find()
-    .then((result)=> { res.render("homepage",{mytitle:"home page ",arr:result})  ;})
-    .catch((err)=> {console.log(err)})
+   res.render("index",{})  ;})
    
+
+app.get("/user/add.html",(req,res)=> {
+    res.render("user/add") ;
 })
-app.get("/homepage.html",(req,res)=> {
-    res.send("<h1> data sended successfuly </h1>") ;
+app.get("/user/view.html",(req,res)=> {
+    res.render("user/view") ;
 })
+app.get("/user/edit.html",(req,res)=> {
+    res.render("user/edit") ;
+})
+
 mongoose
 .connect("mongodb://hadirjaouedi_db_user:MYWCwmroG13aNPCT@ac-omrjkwr-shard-00-00.vkky72a.mongodb.netall-data:27017,ac-omrjkwr-shard-00-01.vkky72a.mongodb.net:27017,ac-omrjkwr-shard-00-02.vkky72a.mongodb.net:27017/?ssl=true&replicaSet=atlas-rgxh02-shard-0&authSource=admin&appName=Cluster0")
 .then(()=> {
@@ -69,18 +74,7 @@ mongoose
 })
 })
 .catch((err)=> {console.log(err)});
-app.post("/",(req,res)=> {
-    console.log(req.body)
-    const mydata=new Mydata(req.body)
-    mydata.save()
-    .then(()=> {
-         res.redirect("/homepage.html")
-    }).catch((err) =>{
-        console.log(err)
-        
-    });
-   
-});
+
 
 
 

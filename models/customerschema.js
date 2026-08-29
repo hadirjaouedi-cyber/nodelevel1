@@ -1,0 +1,14 @@
+const mongoose = require('mongoose');
+const Schema=mongoose.Schema;
+const userSchema=new Schema({
+    firstName:String,
+    lastName:String,
+    email:String,
+    phomeNumber:String,
+    age:Number,
+    country:String,
+    gender:String,
+
+});
+const Mydata=mongoose.model("customer",userSchema);
+module.exports=Mydata

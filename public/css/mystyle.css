@@ -1,0 +1,43 @@
+.bi-lightning-charge-fill{
+ font-family: 1.9rem;
+ margin-right: 1rem;
+}
+.sidebar{
+    width:280px;
+    transition: 0.5s;
+}
+.small-sidebar{
+    width:77px;
+}
+.small-sidebar .sidebar-text{
+    display: none;
+}
+.bi-lightning-charge-fill{
+    margin-top: 1rem;
+    rotate:360deg;
+    transition: 1s;
+}
+.small-sidebar .bi-lightning-charge-fill{
+    
+    margin-top: 2.5rem;
+   
+}
+.small-sidebar .bi-x-circle::before{
+    content:"\F134";
+     transition: 1s;
+}
+.small-sidebar .bi-lightning-charge-fill::before{
+  content:"\F46D";
+  transform: rotateY(360deg);
+  transition: 1s;
+  margin-left: 0.6rem;
+}
+.bi-x-circle{
+    font-size: 1.6rem;
+    transition: 0.25s;
+    color: white;
+}
+.bi-x-circle:hover{
+    font-size: 1.6rem;
+    color: rgb(177, 25, 25);
+}

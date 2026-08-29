@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+  <meta name="generator" content="Astro v5.13.2" />
+  <title>view page</title>
+  <link rel="stylesheet" href="../bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+  <script src="../js/color-modes.js"></script>
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <link href="../css/sidebars.css" rel="stylesheet" />
+ <link rel="stylesheet" href="../css/darklight.css">
+  <link rel="stylesheet" href="../css/mystyle.css">
+</head>
+
+<body>
+ <%- include('../components/darklight.ejs') %>
+  <main class="d-flex flex-nowrap">
+
+<%- include('../components/sidebar.ejs',{currentPage:"view"}) %>
+    <section class=" w-100  ">
+       <%- include('../components/navbar.ejs') %>
+      <nav style="width: 88%; " class="mt-3  px-1 d-flex flex-wrap  justify-content-between" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Name</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+        <p><span class=" fw-medium fs-5">id:11111mlkjhgfd</span></p>
+      </nav>
+      <table style="width: 88%; " class="table ms-1  table-bordered mt-5 table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">FirstName</th>
+            <th class="fw-normal" scope="col">Ali</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">LastName</th>
+            <td>Hasan</td>
+          </tr>
+          <tr>
+            <th scope="row">Telephone</th>
+            <td>00852153</td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td>Hasan@gmail.com</td>
+          </tr>
+          <tr>
+            <th scope="row">Gender</th>
+            <td>Male</td>
+          </tr>
+          <tr>
+            <th scope="row">Age</th>
+            <td>25</td>
+          </tr>
+          <tr>
+            <th scope="row">Country</th>
+            <td>egypt</td>
+          </tr>
+          <tr>
+            <th scope="row">Created on</th>
+            <td>22/08/2026</td>
+          </tr>
+          <tr>
+            <th scope="row">LastUpdated</th>
+            <td>23/08/2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="../js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+  <script src="../js/sidebars.js" class="astro-vvvwv3sm"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

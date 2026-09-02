@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose');
-const port = 3001
+require('dotenv').config(); // ← AJOUTEZ CETTE LIGNE
+const port = process.env.PORT || 3001 // ← MODIFIEZ CETTE LIGNE
 const User = require("./models/customerschema");
 const moment = require('moment');
 var methodOverride = require('method-override')
@@ -140,10 +141,10 @@ app.put("/edit/:id", (req, res) => {
 
 
 mongoose
-    .connect("mongodb://hadirjaouedi_db_user:MYWCwmroG13aNPCT@ac-omrjkwr-shard-00-00.vkky72a.mongodb.net:27017,ac-omrjkwr-shard-00-01.vkky72a.mongodb.net:27017,ac-omrjkwr-shard-00-02.vkky72a.mongodb.net:27017/?ssl=true&replicaSet=atlas-rgxh02-shard-0&authSource=admin&appName=Cluster0")
+    .connect(process.env.MONGODB_URI) // ← UTILISE .env
     .then(() => {
         app.listen(port, () => {
             console.log(`http://localhost:${port}/`)
         })
     })
-    .catch((err) => { console.log(err) });
+    .catch((err) => { console.log(err) })
